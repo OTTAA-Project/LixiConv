@@ -9,6 +9,8 @@ Created on Tue Jun 15 11:38:49 2021
 import tensorflow as tf
 
 #Define a function to create models
+#Modellos de aplicación similar
+
 def create_model1():
 
     cnn_model1 = tf.keras.models.Sequential()
@@ -50,11 +52,25 @@ def create_model3():
 
     return cnn_model3
 
+#Modelos para transfer learning
+
+
 #puedo hacer un for que recorra todos los modelos definidos, los ejecute y los guarde
+
+
 #Create a basic model instance
+model_appsim1 = create_model1()
+model_appsim2 = create_model2()
 model_appsim3 = create_model3()
+
 #Display model architecture
+model_appsim1.summary()
+model_appsim2.summary()
 model_appsim3.summary()
+
 #Save the model architecture
-model_appsim3.save('/Users/gastoncavallo/Desktop/Facultad/PI/models_arch/model_appsim1')
+model_appsim1.save('/Users/gastoncavallo/Desktop/Facultad/PI/models_arch/model_appsim1')
+model_appsim2.save('/Users/gastoncavallo/Desktop/Facultad/PI/models_arch/model_appsim2')
+model_appsim3.save('/Users/gastoncavallo/Desktop/Facultad/PI/models_arch/model_appsim3')
+
 
